@@ -1,0 +1,88 @@
+.dashboards {
+  padding: var(--padding-section);
+}
+
+.dashboards__container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 2rem;
+  max-width: var(--max-width-container);
+  margin: auto;
+  padding: var(--padding-container);
+}
+
+.dashboards__title {
+  font-size: 2rem;
+  text-shadow: 0 0 0.25rem var(--primary-highlight-color);
+  text-align: center;
+  margin: 0;
+}
+
+.dashboard-models,
+.dashboard-features,
+.dashboard-constructions-year {
+  background-color: var(--secondary-theme-color);
+  border-radius: var(--border-radius);
+}
+
+.dashboard-models__container,
+.dashboard-features__container,
+.dashboard-constructions-year__container {
+  padding: 1rem;
+}
+
+.dashboard-models__title,
+.dashboard-features__title,
+.dashboard-constructions-year__title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 0.25rem var(--primary-highlight-color);
+  margin: 0;
+}
+
+.dashboard-models__chart,
+.dashboard-features__chart,
+.dashboard-constructions-year__chart {
+  width: 100%;
+}
+
+.dashboard-features__select-info {
+  background-color: transparent;
+  color: var(--text-color);
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.25rem;
+}
+
+.dashboard-features__select-info:focus {
+  background-color: var(--secondary-theme-color);
+}
+
+@media (min-width: 854px) {
+  .dashboards__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "dashboards-title dashboards-title"
+      "dashboards-models dashboards-features"
+      "dashboards-constructions dashboards-constructions";
+  }
+
+  .dashboards__title {
+    grid-area: dashboards-title;
+  }
+
+  .dashboard-models {
+    grid-area: dashboards-models;
+  }
+
+  .dashboard-features {
+    grid-area: dashboards-features;
+  }
+
+  .dashboard-constructions-year {
+    grid-area: dashboards-constructions;
+  }
+}
