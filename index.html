@@ -6,10 +6,104 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Feliz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/index.css" />
 </head>
 
-<body>
-  <h1>Dashboard Feliz</h1>
+<body class="body">
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__title-logo">Dashboard Feliz</h1>
+      <button class="header-nav__theme-icon-container" id="headerNavThemeIconContainer">
+        <span class="header-nav__theme-icon">🌚</span>
+        <span class="header-nav__theme-icon">🌞</span>
+      </button>
+    </div>
+  </header>
+  <main class="main">
+    <section class="dashboards">
+      <div class="dashboards__container">
+        <h2 class="dashboards__title">Montañas rusas</h2>
+        <section class="dashboard-models">
+          <div class="dashboard-models__container">
+            <h2 class="dashboard-models__title">Modelos</h2>
+            <canvas id="dashboardModelsChart" class="dashboard-models__chart"></canvas>
+          </div>
+        </section>
+        <section class="dashboard-features">
+          <div class="dashboard-features__container">
+            <h2 class="dashboard-features__title">Características (España)</h2>
+            <select id="dashboardFeaturesSelectInfo" class="dashboard-features__select-info">
+              <option value="height">Altura (m)</option>
+              <option value="length">Longitud (m)</option>
+              <option value="speed">Velocidad (k/h)</option>
+            </select>
+            <canvas id="dashboardFeaturesChart" class="dashboard-features__chart"></canvas>
+          </div>
+        </section>
+        <section class="dashboard-constructions-year">
+          <div class="dashboard-constructions-year__container">
+            <h2 class="dashboard-constructions-year__title">Contrucciones por año</h2>
+            <canvas id="dashboardConstructionsYearChart" class="dashboard-constructions-year__chart"></canvas>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer-nav">
+      <div class="footer-nav-container">
+        <ul class="footer-nav__link-list">
+          <li class="footer-nav__link-item">
+            <a href="https://www.linkedin.com/in/elliotgaramendi/" class="footer-nav__link">
+              <img src="https://i.postimg.cc/J7BLFtdc/linkedin.png" alt="LinkedIn" class="footer-nav__link-image" />
+            </a>
+          </li>
+          <li class="footer-nav__link-item">
+            <a href="https://www.instagram.com/elliotgaramendi/" class="footer-nav__link">
+              <img src="https://i.postimg.cc/sfJtqS4W/instagram.png" alt="Instagram" class="footer-nav__link-image" />
+            </a>
+          </li>
+          <li class="footer-nav__link-item">
+            <a href="https://www.facebook.com/elliotgaramendi" class="footer-nav__link">
+              <img src="https://i.postimg.cc/7YHyZXZX/facebook.png" alt="Facebook" class="footer-nav__link-image" />
+            </a>
+          </li>
+          <li class="footer-nav__link-item">
+            <a href="https://github.com/ElliotXLeo" class="footer-nav__link">
+              <img src="https://i.postimg.cc/5NBMxTJX/github.png" alt="GitHub" class="footer-nav__link-image" />
+            </a>
+          </li>
+          <li class="footer-nav__link-item">
+            <a href="https://www.youtube.com/channel/UCE9whBrtYnLWrpzwk6z_JUA" class="footer-nav__link">
+              <img src="https://i.postimg.cc/dtPYcvbM/youtube.png" alt="YouTube" class="footer-nav__link-image" />
+            </a>
+          </li>
+          <li class="footer-nav__link-item">
+            <a href="https://nextjs-react-portafolio-fc.vercel.app" class="footer-nav__link">
+              <img src="https://i.postimg.cc/65TVxg9t/world-globe.png" alt="Página Personal"
+                class="footer-nav__link-image" />
+            </a>
+          </li>
+        </ul>
+        <h2 class="footer-nav__credits">
+          🦄Copyright &copy; 2022 <a href="https://www.linkedin.com/in/elliotgaramendi/"
+            class="footer-nav__credits-author" target="_blank" rel="noreferrer">Elliot Garamendi.</a> Todos los derechos
+          reservados.🦄
+        </h2>
+      </div>
+    </nav>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+    integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
